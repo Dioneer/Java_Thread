@@ -7,7 +7,7 @@ public class ExecutorExample {
     static Future<String> task = pool.submit(new CallableExample("ERROR"));
 
     public static void main(String[] args) {
-        while(task.isDone()){
+        while(!task.isDone()){
             try {
                 Thread.sleep(1);
                 System.out.println(task.get());

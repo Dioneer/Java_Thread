@@ -15,7 +15,7 @@ public class Runnable1 implements Runnable{
     public static void main(String[] args) throws InterruptedException {
         Thread tr1 = new Thread(new Runnable1("Igor"));
         tr1.start();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         Thread tr2 = new Thread(new Runnable1("Dima"));
         tr2.start();
         Thread tr3 = new Thread(new Runnable1("Borya"));

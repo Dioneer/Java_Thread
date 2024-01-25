@@ -12,7 +12,9 @@ public class Thread1 extends Thread{
 
     public static void main(String[] args) throws InterruptedException {
         Thread1 tr1 = new Thread1("Ivan");
+        System.out.println(tr1.isAlive());
         tr1.start();
+        System.out.println(tr1.isAlive());
         Thread.sleep(1000);
         Thread1 tr2 = new Thread1("Pavel");
         tr2.start();

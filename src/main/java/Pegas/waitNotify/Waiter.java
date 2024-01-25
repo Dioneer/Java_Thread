@@ -6,7 +6,7 @@ public class Waiter {
     public Waiter(Message msg) {
         this.msg = msg;
     }
-    Runnable runnable = (()->{
+    public Runnable runnable = (()->{
         String name = Thread.currentThread().getName();
         synchronized (msg){
             try {
