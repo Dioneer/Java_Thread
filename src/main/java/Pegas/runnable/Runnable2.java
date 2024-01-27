@@ -1,4 +1,4 @@
-package Pegas;
+package Pegas.runnable;
 
 public class Runnable2 implements Runnable{
     @Override

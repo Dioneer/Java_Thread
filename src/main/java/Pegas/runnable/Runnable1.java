@@ -1,7 +1,8 @@
-package Pegas;
+package Pegas.runnable;
 
 public class Runnable1 implements Runnable{
     private final String name;
+    private static int counter;
 
     public Runnable1(String name) {
         this.name = name;
@@ -20,5 +21,16 @@ public class Runnable1 implements Runnable{
         tr2.start();
         Thread tr3 = new Thread(new Runnable1("Borya"));
         tr3.start();
+        test1();
+    }
+    public synchronized static void test1(){
+        Runnable runnable = (()->{
+            for (int i = 0; i < 5; i++) {
+                counter++;
+                System.out.println(Thread.currentThread().getName() + " : " +counter);
+            }
+        });
+        new Thread(runnable).start();
+        new Thread(runnable).start();
     }
 }

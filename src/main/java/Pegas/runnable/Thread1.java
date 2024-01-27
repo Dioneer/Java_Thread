@@ -1,4 +1,4 @@
-package Pegas;
+package Pegas.runnable;
 
 public class Thread1 extends Thread{
     private final String name;
